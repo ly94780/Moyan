@@ -1,0 +1,143 @@
+@import 'highlight.js/styles/github.css';
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color: #252c3a;
+  background: #fff;
+  font-synthesis: none;
+  --bg: #fff;
+  --surface: #f8f9fb;
+  --subtle: #f1f3f7;
+  --text: #252c3a;
+  --muted: #687386;
+  --line: #e9ecf1;
+  --accent: #4168d4;
+  --accent-soft: #edf2ff;
+  --code: #f6f8fb;
+  --shadow: 0 12px 48px #18213c14;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #191d25;
+  --surface: #151920;
+  --subtle: #242a35;
+  --text: #e0e5ef;
+  --muted: #9ba6b8;
+  --line: #2a313f;
+  --accent: #93b1ff;
+  --accent-soft: #263554;
+  --code: #212734;
+  --shadow: 0 12px 48px #0005;
+  color: var(--text);
+  background: var(--bg);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+::selection {
+  background: #7493ed40;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8b96ab48;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 9px;
+}
+svg {
+  flex-shrink: 0;
+  stroke-width: 1.7;
+}
+[hidden] {
+  display: none !important;
+}
+.cm-editor {
+  background: var(--bg);
+  color: var(--text);
+}
+.cm-editor .cm-activeLine {
+  background: var(--accent-soft);
+}
+.cm-editor .cm-search {
+  background: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 12px;
+}
+.cm-search input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+.cm-search button {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: var(--subtle);
+  border-radius: 4px;
+}
+.cm-search label:has(input[name='re']) {
+  display: none;
+}
+[data-theme='dark'] .hljs {
+  color: #d5dcec;
+  background: transparent;
+}
+[data-theme='dark'] .hljs-keyword,
+[data-theme='dark'] .hljs-selector-tag {
+  color: #c5a5fa;
+}
+[data-theme='dark'] .hljs-string {
+  color: #a9d795;
+}
+[data-theme='dark'] .hljs-title {
+  color: #93baff;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
